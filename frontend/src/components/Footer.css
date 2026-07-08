@@ -1,0 +1,44 @@
+footer {
+  background-color: #212429; /* 🌿 same as navbar */
+  color: rgb(248, 210, 16); /* golden yellow text */
+  font-family: "Poppins", sans-serif;
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1rem;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  color: rgb(248, 210, 16);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* copyright & info section */
+footer div {
+  line-height: 1.8;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: rgb(248, 210, 16);
+}
+
+footer a:hover {
+  color: white;
+}

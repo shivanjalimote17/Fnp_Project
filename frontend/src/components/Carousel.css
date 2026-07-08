@@ -1,0 +1,9 @@
+.caption h3{
+   color: rgb(244, 244, 233); 
+   text-shadow: 2px 2px 5px rgb(9, 9, 8);   
+}
+
+.caption p{
+    color: rgb(240,240.240);
+    text-shadow: 1px 1px 4px rgb(12,12,12); 
+}

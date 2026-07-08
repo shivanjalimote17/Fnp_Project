@@ -1,0 +1,119 @@
+/* ===== Navbar Base Styles ===== */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  z-index: 1050;
+  padding: 10px 0;
+  background-color: #212529 !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ===== Brand Styling ===== */
+.brand-name {
+  color: #f8d210 !important;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-right: 15%;
+}
+
+.navbar-brand:hover {
+  color: #fff700 !important;
+  transition: color 0.3s ease;
+}
+
+/* ===== Nav Links (Right aligned using ms-auto) ===== */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f8d210 !important;
+}
+
+/* ===== Logout Button ===== */
+.logout {
+  margin-left: 20px;
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border: 1px solid #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.logout:hover {
+  background-color: #f8d210 !important;
+  border-color: #f8d210 !important;
+  color: #000 !important;
+}
+
+/* ===== Toggle Dropdown Menu (mobile view) ===== */
+.navbar-collapse {
+  display: none;
+  position: absolute;
+  top: 55px; /* same as navbar height */
+  left: 0;
+  width: 100%;
+  background-color: #212529;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1049;
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
+.navbar-collapse.show .nav-link {
+  display: block;
+  padding: 10px 0;
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-collapse.show .nav-link:hover {
+  color: #f8d210 !important;
+}
+
+.navbar-collapse.show .logout {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Desktop Layout Reset */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    position: static;
+    background: none;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .navbar-collapse .nav-link {
+    display: inline-block;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,84 @@
+/* Full container for split background */
+.contact-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Top half - solid color or gradient */
+.contact-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  /* background-image: url("../assets/contactImg.jpg"); */
+   background-color: #72e8a7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+ 
+}
+
+/* Bottom half - image */
+.contact-bg::after {
+  content: "";
+  position: absolute;
+   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(135deg, #f9fafb, #f1f3f4); /* green gradient */
+
+  z-index: 1;
+}
+
+/* Contact box */
+.contact-container {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(12, 12, 12, 0.616);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 800px;
+  /* text-align: center; */
+}
+
+/* Text styling */
+.contact-info p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.contact-info h4,
+.contact-info h6 {
+  color: #222;
+}
+
+/* Buttons */
+.contact-container .btn {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 25px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .contact-info h4 {
+    font-size: 18px;
+  }
+}

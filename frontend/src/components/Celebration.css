@@ -1,0 +1,63 @@
+
+
+/* Title styling */
+.celeb-title {
+  font-weight: 700;
+  font-size: 22px;
+  color: #333;
+  margin: 35px;
+  text-align: center;
+}
+
+/* Center all cards */
+.row-celeb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Card styling */
+.card-img {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
+}
+
+/* Image wrapper and badge */
+.img-wrapper {
+  position: relative;
+}
+
+.card-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Date badge styling */
+.date-badge {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Card text */
+.card-text {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 8px;
+  text-align: center;
+}

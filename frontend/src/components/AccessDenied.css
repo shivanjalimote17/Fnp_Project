@@ -1,0 +1,33 @@
+/* Full-page centering */
+.access-denied-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9; /* soft neutral background */
+}
+
+/* Image box styling */
+.access-denied-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+}
+
+/* Image styling */
+.access-denied-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: small text adjustment */
+.access-denied-container p {
+  color: #555;
+  margin-top: 10px;
+  font-size: 15px;
+}

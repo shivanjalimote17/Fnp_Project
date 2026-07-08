@@ -1,0 +1,34 @@
+.bestseller-container {
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.title{
+   margin-top: 40px;
+   margin-bottom: 30px;
+   text-align: center; 
+   font-weight: 700;
+}
+
+.bestseller-row {
+  text-align: center;
+  justify-content-center
+}
+
+.bestseller-card {
+  border:none;
+  border-radius:12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bestseller-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.bestseller-img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}

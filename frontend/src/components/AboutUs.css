@@ -1,0 +1,102 @@
+.hover-card {
+  box-shadow: 0 4px 12px rgba(8, 8, 8, 0.532);
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+  box-shadow: 0 8px 20px rgba(11, 11, 11, 0.863);
+  transform: translateY(-5px);
+}
+
+
+/* AboutUs.css */
+
+/* Page background gradient */
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ffffff, #f9f9f9);
+  color: #333;
+}
+
+/* Headings */
+h2, h3, h5 {
+  letter-spacing: 0.5px;
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Cards for Vision & Mission */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Team cards */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Team member image */
+.hover-card img {
+  object-fit: cover;
+  border: 3px solid #e0e0e0;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  width: 100px;
+  height: 100px;
+}
+
+.hover-card img:hover {
+  transform: scale(1.1);
+  border-color: #6c63ff; /* subtle accent color on hover */
+}
+
+/* Team member name & role */
+.hover-card h5 {
+  margin-bottom: 0.25rem;
+  color: #6c63ff;
+}
+
+.hover-card p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Centering & spacing tweaks */
+.container {
+  max-width: 1200px;
+}
+
+.text-primary {
+  color: #6c63ff !important;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hover-card img {
+    width: 80px;
+    height: 80px;
+  }
+}
