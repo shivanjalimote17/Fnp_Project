@@ -9,35 +9,57 @@ import { ROLES } from "./constants/RoleConstants.js";
 import Dashboard from "./components/Dashboard.jsx";
 import { RegistrationForm } from "./components/RegistrationForm.jsx";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; 
+import "react-toastify/dist/ReactToastify.css";
 import { UserOrders } from "./components/UserOrders.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 import { Footer } from "./components/Footer.jsx";
 function App() {
   return (
     <>
-
-    
-     <ToastContainer position="top-right" autoClose={4000} theme="colored" />
-       
+      <ToastContainer position="top-right" autoClose={4000} theme="colored" />
 
       <Routes>
-
-        
         <Route path="/login" element={<Login />} />
-
-        <Route element={<PrivateRoute allowedRoles={[ROLES.ADMIN]} />}>
-          <Route path="/getAllOrders"
-           element={
+        <Route
+          path="/"
+          element={
             <>
-           <Navigationbar />
-           <Dashboard />
-           </>
-           }
-           />
-        </Route>
+              <Navigationbar />
+              <Homepage />
+            </>
+          }
+        />
 
         <Route
+          path="/contactus"
+          element={
+            <>
+              <Navigationbar />
+              <ContactDetails />
+            </>
+          }
+        />
+
+        <Route
+          path="/aboutus"
+          element={
+            <>
+              <Navigationbar />
+              <AboutUs />
+            </>
+          }
+        />
+        <Route
+          path="/add-product"
+          element={
+            <>
+              <Navigationbar />
+              <Products />
+            </>
+          }
+        />
+
+        {/* <Route
           element={
             <PrivateRoute allowedRoles={[ROLES.ADMIN, ROLES.CUSTOMER]} />
           }
@@ -51,10 +73,10 @@ function App() {
               </>
             }
           />
-        </Route>
+        </Route> */}
 
         <Route element={<PrivateRoute allowedRoles={[ROLES.CUSTOMER]} />}>
-          <Route
+          {/* <Route
             path="/add-product"
             element={
               <>
@@ -62,7 +84,7 @@ function App() {
                 <Products />
               </>
             }
-          />
+          /> */}
           <Route
             path="/getUserOrders"
             element={
@@ -73,7 +95,7 @@ function App() {
             }
           />
 
-          <Route
+          {/* <Route
             path="/contactus"
             element={
               <>
@@ -91,19 +113,24 @@ function App() {
                 <AboutUs />
               </>
             }
+          /> */}
+        </Route>
+        
+        <Route element={<PrivateRoute allowedRoles={[ROLES.ADMIN]} />}>
+          <Route
+            path="/getAllOrders"
+            element={
+              <>
+                <Navigationbar />
+                <Dashboard />
+              </>
+            }
           />
         </Route>
 
-       
-
-        
-
-        
-
         <Route path="/register" element={<RegistrationForm />} />
-
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }
