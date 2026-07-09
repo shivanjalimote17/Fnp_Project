@@ -26,9 +26,9 @@ export function Navigationbar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="shadow-sm navbar">
       <Container>
-        {/* ✅ Brand / Logo */}
+        {/* Brand / Logo */}
         <Navbar.Brand
-          onClick={() => navigate("/home")}
+          onClick={() => navigate("/")}
           className="brand-name"
           style={{
             letterSpacing: "1px",
@@ -98,7 +98,7 @@ export function Navigationbar() {
 
           </Nav>
 
-          {/* ✅ Right-side Auth Buttons */}
+          {/* Right-side Auth Buttons */}
           <Nav>
             {token ? (
               <Button
@@ -114,7 +114,7 @@ export function Navigationbar() {
               </Button>
             ) : (
               <NavLink
-                to="/"
+                to="/login"
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }

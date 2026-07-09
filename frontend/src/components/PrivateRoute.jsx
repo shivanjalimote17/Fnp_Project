@@ -54,7 +54,7 @@ export function PrivateRoute({ allowedRoles }) {
 
   // If token missing or invalid/expired, redirect to login
   if (!isValid) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   // If token present and role allowed, render nested routes
@@ -73,29 +73,6 @@ export function PrivateRoute({ allowedRoles }) {
   }
 
   // Fallback: redirect to login
-  return <Navigate to="/" replace />;
+  return <Navigate to="/login" replace />;
 }
 
-//OG Code
-// export function PrivateRoute({ allowedRoles }) {
-//   const token = getToken();
-//   const role = getRole();
-
-//   if (token) {
-//     if (allowedRoles.includes(role)) {
-//       // ✅ Authorized → show requested component
-//       return <Outlet />;
-//     } else {
-//       // ❌ Unauthorized → show AccessDenied WITH navbar
-//       return (
-//         <>
-//           <Navigationbar />
-//           <AccessDenied />
-//         </>
-//       );
-//     }
-//   } else {
-//     // ⛔ No token → redirect to login or home
-//     return <Navigate to="/" replace />;
-//   }
-// }

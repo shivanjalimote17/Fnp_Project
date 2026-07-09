@@ -24,7 +24,7 @@ function App() {
       <Routes>
 
         
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
 
         <Route element={<PrivateRoute allowedRoles={[ROLES.ADMIN]} />}>
           <Route path="/getAllOrders"
@@ -43,7 +43,7 @@ function App() {
           }
         >
           <Route
-            path="/home"
+            path="/"
             element={
               <>
                 <Navigationbar />
